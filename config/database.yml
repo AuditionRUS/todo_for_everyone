@@ -1,0 +1,17 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: blog_development
+  pool: 5
+  timeout: 5000
+  username: anton
+  password: 4452dcdc
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: blog_test
+  pool: 5
+  timeout: 5000
+  username: anton
+  password: 4452dcdc

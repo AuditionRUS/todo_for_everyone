@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="wrapper-content">
+      <article class="article-body">
+        <%= yield %>
+      </article>
+    </div>
+    <div class="registration">
+      <% if @current_user %>
+        Logged in as <%= @current_user.email %>.
+        <%= link_to "Log Out", logout_path, :class => 'btn btn-primary' %>
+        <%= link_to "Edit user", edit_user_path(@current_user), :class => 'btn btn-primary' %>
+        <%= link_to "Go to todo", tasks_path, :class => 'btn btn-primary' %>
+      <% else %>
+        <%= link_to "Sign Up", registration_path, :class => 'btn btn-primary' %> or
+        <%= link_to "Log In", login_path, :class => 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
+</body>
+</html>

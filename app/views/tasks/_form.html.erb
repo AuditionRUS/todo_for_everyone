@@ -1,0 +1,33 @@
+<%= form_with model: @task, local: true do |form| %>
+
+  <% if @task.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@task.errors.count, "error") %> prohibited
+        this task from being saved:
+      </h2>
+      <ul>
+        <% @task.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= form.label :title, :class => 'bmd-label-floating' %><br>
+    <%= form.text_field :title, :class => 'form-control'  %>
+  </p>
+
+  <p>
+    <%= form.label :text, :class => 'bmd-label-floating'  %><br>
+    <%= form.text_area :text, :class => 'form-control'  %>
+  </p>
+
+  <%= form.hidden_field :complete, value: "false" %>
+
+  <p>
+    <%= form.submit(:class => 'btn btn-primary btn-raised')  %>
+  </p>
+
+<% end %>

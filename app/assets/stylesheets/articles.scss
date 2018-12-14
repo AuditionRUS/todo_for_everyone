@@ -1,0 +1,42 @@
+// Place all the styles related to the Articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.wrapper {
+  padding: 100px;
+  width: 1280px;
+  margin: 0;
+  background-color: #DFDFDF;
+  display: flex;
+}
+
+.wrapper-content {
+  width: 720px;
+  margin: 0 auto;
+}
+
+.registration {
+  display: flex;
+  align-items: start;
+  flex-flow: column;
+
+  a {
+    width: 100px;
+    margin-top: 10px;
+  }
+
+}
+
+table {
+
+  th {
+    min-width: 100px;
+    border: 3px solid #007bff;
+    border-collapse: collapse;
+  }
+
+  width: 100%;
+  border: 3px solid #007bff;
+  border-collapse: collapse;
+
+}

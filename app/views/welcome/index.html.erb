@@ -1,0 +1,6 @@
+<h2>Welcome page</h2>
+<h3>Welcome</h3>
+<% if @current_user %>
+  <%= link_to "Go to todo", tasks_path, :class => 'btn btn-primary' %>
+<% end %>
+
